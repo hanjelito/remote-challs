@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/31 09:42:16 by juan-gon          #+#    #+#             */
-/*   Updated: 2020/03/31 11:21:49 by juan-gon         ###   ########.fr       */
+/*   Updated: 2020/03/31 11:26:09 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,10 @@ char *hex(int dat)
     if(dat < 10)
         return ft_strjoin("0", str);
     return str;
+}
+
+char *hv_rgb2hex(int r, int g, int b)
+{
+    return ft_strjoin("#", ft_strjoin(hex(r),
+        ft_strjoin(hex(g),hex(b))));
 }
